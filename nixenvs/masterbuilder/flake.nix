@@ -1,5 +1,5 @@
 {
-  description = "Portable static environment with sops, age, git, terraform, ansible (with google.cloud), and mkcert";
+  description = "Portable static environment with sops, age, git, terraform, ansible (with google.cloud), mkcert, and butane";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/d31a91c9b3bee464d054633d5f8b84e17a637862";
@@ -39,6 +39,7 @@
             pkgs.s6-overlay-noarch
             pkgs.s6-overlay-x86_64
             pkgs.mkcert
+            pkgs.butane     # 🔹 Added Butane for CoreOS Ignition
             pythonEnv
           ];
         };
@@ -57,6 +58,7 @@
             pkgs.s6-overlay-noarch
             pkgs.s6-overlay-x86_64
             pkgs.mkcert
+            pkgs.butane     # 🔹 Available in devShell too
             pythonEnv
           ];
 
@@ -65,6 +67,7 @@
             echo "✅ Ansible with GCP support ready."
             echo "📦 Using Python: $(which python3)"
             echo "📦 Ansible path: $(which ansible)"
+            echo "📦 Butane path: $(which butane)"
             echo "You may now run: ansible-galaxy collection install google.cloud"
           '';
         };
