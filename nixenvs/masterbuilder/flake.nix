@@ -39,7 +39,7 @@
             pkgs.s6-overlay-noarch
             pkgs.s6-overlay-x86_64
             pkgs.mkcert
-            pkgs.butane     # 🔹 Added Butane for CoreOS Ignition
+            pkgs.butane
             pythonEnv
           ];
         };
@@ -58,7 +58,7 @@
             pkgs.s6-overlay-noarch
             pkgs.s6-overlay-x86_64
             pkgs.mkcert
-            pkgs.butane     # 🔹 Available in devShell too
+            pkgs.butane
             pythonEnv
           ];
 
